@@ -1,0 +1,25 @@
+/* =====================For Header CSS===================== */
+nav a{
+
+    color: black;
+    text-decoration: none;
+
+}
+
+
+/* =====================For Home Page CSS===================== */
+
+.container a{
+    /* color: black; */
+    /* color: black; */
+    text-decoration: none;
+}
+
+/* ======================CSS for Login Page====================== */
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* max-height: 84vh; */
+}
