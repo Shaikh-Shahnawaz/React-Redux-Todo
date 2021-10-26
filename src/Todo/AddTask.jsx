@@ -63,7 +63,7 @@ function AddTask() {
         setAllTask([...allTask])
         
         // after clicking add btn send data to reducer
-        dispatch(getTasks(allTask))
+        dispatch(getTasks(input))
 
         // Ref for clearing the input
         addInputValue.current.value = ''

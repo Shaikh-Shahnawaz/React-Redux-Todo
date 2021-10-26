@@ -17,7 +17,8 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     getTasks: (state, action) => {
-      state.task = action.payload;
+      // state.task = action.payload;
+      state.task.push(action.payload)
     },
 
     getRemoveFunction: (state, action) => {
