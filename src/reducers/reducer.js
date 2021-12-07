@@ -33,7 +33,7 @@ export const counterSlice = createSlice({
     },
 
     getSearchData: (state, action) => {
-      console.log("===>", action.payload);
+      // console.log("===>", action.payload);
       state.task = state.task.filter((ele) => {
         if (ele.taskName.toLowerCase().includes(action.payload)) {
           return ele.taskName;

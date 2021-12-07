@@ -36,9 +36,11 @@ function AddTask() {
 
     // handle Change of Add Task Input
     const [input, setInput] = useState({
+
         id: '',
         taskName: '',
         date: ''
+        
     })
 
     const [toggleInput,setToggleInput] = useState(true) // toggle for update/add task input
@@ -50,23 +52,38 @@ function AddTask() {
         setInput({ 
             ...input, [event.target.name]: event.target.value
          })
+           
     }
 
     // --------------------------Function for adding/storing task in use state(array)---------------------------
 
     function addingTask() {
+       
+    if( addInputValue.current.value == ''){
+        alert("Task Cannot be Empty !!")
+    }
+    else{
+        doWork()
+    }           
+          
+    }
+    
+    function doWork(){
 
-        input.id = new Date().getTime().toString()  // for id
-        input.date = new Date().toLocaleString() // for date
-        
-        allTask.push(input)
-        setAllTask([...allTask])
-        
-        // after clicking add btn send data to reducer
-        dispatch(getTasks(input))
+    input.id = new Date().getTime().toString()  // for id
+            
+    input.date = new Date().toLocaleString() // for date 
 
-        // Ref for clearing the input
-        addInputValue.current.value = ''
+
+    allTask.push(input)
+    setAllTask([...allTask])
+        
+    // after clicking add btn send data to reducer
+    dispatch(getTasks(input))
+        
+    // Ref for clearing the input
+    addInputValue.current.value = ''
+
     }
 
 

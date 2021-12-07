@@ -1,7 +1,11 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import '../CSS/Header.css'
 function Home() {
+
+
+
     return (
         <div>
             <div class="container jumbotron bg-light  mt-5 p-3 text-center">
